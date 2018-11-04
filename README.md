@@ -1,6 +1,9 @@
 # Purpose
 This is a PoC that combines Orange Tsais research about ["Breaking parser logic"](http://i.blackhat.com/us-18/Wed-August-8/us-18-Orange-Tsai-Breaking-Parser-Logic-Take-Your-Path-Normalization-Off-And-Pop-0days-Out-2.pdf) and an unsecure configuration of spring-boot-starter-actuator as documented in [Baeldungs Docs 3.7 Further Customization](https://www.baeldung.com/spring-boot-actuators#boot-1x-actuator)
 
+I do not want to blame Baeldung. His documentations are incredibly helpful. He also explains what `management.security.enabled=false` means. The thing is, that we people will copy and paste this examples without reading the explanations.
+Here is another example of this setting: [Learn SpringBoot absolute beginners](https://www.tutorialspoint.com/spring_boot/spring_boot_actuator.htm)
+
 
 # Walkthrough 
 1. cd spring; mvn clean install
