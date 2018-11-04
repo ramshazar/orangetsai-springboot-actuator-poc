@@ -4,6 +4,8 @@ This is a PoC that combines Orange Tsais research about ["Breaking parser logic"
 I do not want to blame Baeldung. His documentations are incredibly helpful. He also explains what `management.security.enabled=false` means. The thing is, that we people will copy and paste this examples without reading the explanations.
 Here is another example of this setting: [Learn SpringBoot absolute beginners](https://www.tutorialspoint.com/spring_boot/spring_boot_actuator.htm)
 
+# Impact
+If you have a java spring-boot service behind a reverse proxy that only exposes a sub path to the internet people may be able to access all paths on the spring-boot service. Actuator endpoints are just an example.
 
 # Walkthrough 
 1. cd spring; mvn clean install
