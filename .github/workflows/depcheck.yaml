@@ -10,17 +10,14 @@ jobs:
       - name: Build project with Maven
         run: mvn clean install
         working-directory: spring
-      - name: Depcheck
-        working-directory: ./spring      
+      - name: Depcheck     
         uses: rd-matthias-jambor/Dependency-Check_Action@main
         id: Depcheck
         with:
           project: 'test'
           path: '.'
           format: 'HTML'
-
       - name: Upload Test results
-        working-directory: ./spring
         uses: actions/upload-artifact@master
         with:
            name: Depcheck report
