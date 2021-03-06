@@ -11,17 +11,19 @@ jobs:
         run: mvn clean install
         working-directory: spring
       - name: Depcheck
+        working-directory: ./spring      
         uses: rd-matthias-jambor/Dependency-Check_Action@main
         id: Depcheck
         with:
           project: 'test'
           path: '.'
           format: 'HTML'
-        working-directory: spring
+
       - name: Upload Test results
+        working-directory: ./spring
         uses: actions/upload-artifact@master
         with:
            name: Depcheck report
            path: ${{github.workspace}}/reports
-        working-directory: spring
+
            
