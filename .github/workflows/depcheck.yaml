@@ -17,11 +17,11 @@ jobs:
           project: 'test'
           path: '.'
           format: 'HTML'
-      working-directory: spring
+        working-directory: spring
       - name: Upload Test results
         uses: actions/upload-artifact@master
         with:
            name: Depcheck report
            path: ${{github.workspace}}/reports
-      working-directory: spring
+        working-directory: spring
            
